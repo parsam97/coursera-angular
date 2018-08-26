@@ -1,11 +1,11 @@
 (function() {
 'use strict';
 
-angular.module('lunchCalculator', [])
-.controller('lunchController', lunchController);
+angular.module('lunchCheck', [])
+.controller('LunchCheckController', LunchCheckController);
 
-lunchController.$inject = ['$scope']
-function lunchController ($scope) {
+LunchCheckController.$inject = ['$scope']
+function LunchCheckController ($scope) {
   $scope.list = '';
   $scope.colorResult = 'black'
   $scope.boxBorder = ''
