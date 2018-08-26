@@ -1,10 +1,23 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html>
   <head>
     <meta charset="utf-8">
-    <title>Hello</title>
+    <script src="angular.min.js"></script>
+    <script src="app.js"></script>
+    <title>Name Calculator</title>
   </head>
-  <body>
-    <h1>Hello Coursera. Hi everyone</h1>
+  <body ng-app="lunchCalculator">
+    <h1>What do you eat for lunch babe?</h1>
+    <div ng-controller="lunchController">
+      <div>
+        List items separated by a comma.<br>
+        <!-- empty items are not considered -->
+        <input type="text"
+        ng-model="list"
+        style="border: {{boxBorder}}">
+        <button ng-click="calculate()">Check</button>
+      </div>
+      <div style="color:{{colorResult}}">{{answer}}</div>
+    </div>
   </body>
 </html>
